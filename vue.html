@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="login">
+        <label for="">帳號</label> <input type="text" v-model="Mick.account"><br>
+        <label for="">密碼</label> <input type="password" v-model="Mick.password"> <br>
+        <button type="button" @click="Lorn" > 申請 </button>
+    </div>
+
+</body>
+</html>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script> 
+Vue.createApp({
+    data(){
+        return{ 
+            Mick:{
+                account:"",
+                password:"",
+            }
+            
+
+        }
+    },
+
+    methods:{
+        Lorn() {
+            let self = this;
+            var tempAccount = "Mari";
+            var tempPassword = "333";
+            if (self.Mick.account == tempAccount && self.Mick.password == tempPassword) {
+                alert("succesed");
+                console.log("succeded");
+            }
+            else{
+                alert("Failed");
+                console.log("Failed");
+            }
+        }
+    }
+}).mount("#login");
+
+
+</script>
